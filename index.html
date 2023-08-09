@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/Styles.css">
+    <title>Video Player</title>
+</head>
+<body>
+    <button class="button" id="backward"></button>
+    <button class="button" id="forward"></button>
+    <button class="button" id="play"></button>
+    <button class="button" hidden id="pause"></button>
+    <button>avanzar 10 segundos</button>
+    <video id="video" poster="./images/poster.jpg" controls src="./videos/lofi.mp4" width="200px"></video>
+
+    <script>
+        const $video = document.querySelector('#video')
+        const $play = document.querySelector('#play')
+        const $pause = document.querySelector('#pause')
+
+        $play.addEventListener('click', handlePlay)
+        $pause.addEventListener('click', handlePause)
+
+        function handlePlay () {
+            $video.play()
+            $play.hidden = true
+            $pause.hidden = false
+            console.log('click play')
+        }
+
+        function handlePause () {
+            $video.pause()
+            $play.hidden = false
+            $pause.hidden = true
+            console.log('click pause')
+        }
+    </script>
+</body>
+</html>
