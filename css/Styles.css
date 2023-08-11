@@ -10,4 +10,34 @@ body {
 }
 .player video{
     inline-size: 100%;
+    aspect-ratio: 16/9;
+    vertical-align: middle;
+}
+.player{
+    margin-block-start: 100px;
+    position: relative;
+}
+.player-title{
+    color: white;
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 20px;
+}
+.player-actions{
+    position: absolute;
+    inset-block-start: 0;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.player-progress {
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline: 0;
+    display: flex;
+    padding: 10px;
+}
+.player-progress input {
+    flex: 1;
 }
