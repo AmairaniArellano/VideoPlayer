@@ -12,6 +12,7 @@ body {
     inline-size: 100%;
     aspect-ratio: 16/9;
     vertical-align: middle;
+    object-fit: cover;
 }
 .player{
     margin-block-start: 100px;
@@ -30,6 +31,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 .player-progress {
     position: absolute;
@@ -40,4 +42,13 @@ body {
 }
 .player-progress input {
     flex: 1;
+}
+.player-overlay {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: .3s opacity;
+}
+.player:hover .player-overlay{
+    opacity: 1;
 }
